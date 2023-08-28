@@ -2,7 +2,8 @@
 
 int Calculator::minus(int number1, int number2)
 {
-	return number1 - number2;
+	int result = number1 - number2;
+	return result;
 }
 
 double Calculator::mult(double num, double factor)

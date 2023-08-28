@@ -52,7 +52,9 @@ int main()
 
     //calling a non-static method, use the variable...
     Calculator t1000;
-    int diff = t1000.minus(7, 2);
+    int n1 = 7, n2 = 2;
+    int diff = t1000.minus(n1, n2);//passed by value (COPY)
+    diff = t1000.minus(10, 2);//passed by value (COPY)
 
 
     /*
