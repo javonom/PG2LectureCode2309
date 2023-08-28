@@ -66,7 +66,8 @@ int main()
             Call the method on the t1000 calculator instance and print the results.
 
     */
-
+    bool isEven = t1000.IsEven(n1);
+    std::cout << "is " << n1 << " even? " << ((isEven) ? "YES" : "NO") << "\n";//ternary operator
 
 
     /*
@@ -103,6 +104,11 @@ int main()
             Add a few grades to the grades vector.
 
     */
+    std::vector<float> grades { 95, 55, 75 };
+    grades.push_back(rand() % 101);
+    grades.push_back(rand() % 101);
+    grades.push_back(rand() % 101);
+    grades.push_back(rand() % 101);
 
 
 

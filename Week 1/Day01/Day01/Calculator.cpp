@@ -10,3 +10,8 @@ double Calculator::mult(double num, double factor)
 {
 	return num * factor;
 }
+
+bool Calculator::IsEven(int number)
+{
+	return number % 2 == 0;
+}
