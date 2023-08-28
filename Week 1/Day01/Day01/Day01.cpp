@@ -22,6 +22,8 @@ void print(const std::vector<std::string>& names)
 
 int main()
 {
+    std::cout << "Hello Gotham\n";
+
     /*
       Calling a method
         use the methods name.
