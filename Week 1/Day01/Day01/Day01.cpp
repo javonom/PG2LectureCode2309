@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include "Calculator.h"
+#include "Day01.h"
 
 int AddOne(int localNumber)
 {
@@ -19,6 +20,15 @@ void print(const std::vector<std::string>& names)
         std::cout << index++ << ". " << name << "\n";
 }
 
+
+void PrintGrades(std::vector<float>& grades)
+{
+    std::cout << "   2309 PG2 Grades   \n";
+    for (auto& grade : grades)
+    {
+        std::cout << grade << "\n";
+    }
+}
 
 int main()
 {
@@ -104,6 +114,7 @@ int main()
             Add a few grades to the grades vector.
 
     */
+    srand(time(NULL));
     std::vector<float> grades { 95, 55, 75 };
     grades.push_back(rand() % 101);
     grades.push_back(rand() % 101);
@@ -125,12 +136,11 @@ int main()
     // begin() -- returns an iterator pointing to the first element
     // end() – returns an iterator pointing to the element AFTER the last element
     std::cout << "--- for loop:\n";
-    for (size_t i = 0; i < names.size(); i++)
+    for (unsigned int i = 0; i < names.size(); i++)
     {
         std::cout << names[i] << "\n";
     }
     std::cout << "\n\n";
-
 
     std::cout << "--- for loop with iterators:\n";
     for (auto i = names.begin(); i != names.end(); ++i)
@@ -140,7 +150,7 @@ int main()
     std::cout << "\n\n";
 
     std::cout << "--- Range-based for loop:\n";
-    for (auto& name : names)
+    for (std::string name : names)
         std::cout << name << std::endl;
     std::cout << "\n\n";
 
@@ -149,7 +159,8 @@ int main()
 
             loop over the grades vector and print out each grade
 
-    */
+            */
+    PrintGrades(grades);
 
 
 
@@ -175,16 +186,13 @@ int main()
 
     std::cout << "\nerase the 3rd item (" << names[2] << ") up to but not including the 5th item (" << names[4] << ")\n";
     std::vector<std::string>::iterator start = names.begin() + 2;//start at the 3rd item.
-    std::vector<std::string>::iterator end = start + 2;//ends at the 5th item. 
-    names.erase(start, end);//erases elements 3 and 4 but stops at the 5th.
+    std::vector<std::string>::iterator stop = start + 2;//stop at the 5th item. 
+    names.erase(start, stop);//erases elements 3 and 4 but stops at the 5th.
     print(names);
-
 
     names.clear();
     std::cout << "\nclear all elements\n";
     print(names);
-
-
 
     /*
 
@@ -195,7 +203,11 @@ int main()
             Print the grades.
 
     */
-
+    PrintGrades(grades);
+    grades.erase(grades.begin() + grades.size() - 1);
+    PrintGrades(grades);
+    grades.erase(grades.end() - 1);
+    PrintGrades(grades);
 
 
 

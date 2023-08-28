@@ -132,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Calculator.h" />
+    <ClInclude Include="Day01.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt" />
