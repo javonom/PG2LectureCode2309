@@ -32,7 +32,7 @@ void PrintGrades(std::vector<float>& grades)
 
 int main()
 {
-    std::cout << "Hello Gotham\n";
+    std::cout << "Some changes\n";
 
     /*
       Calling a method
