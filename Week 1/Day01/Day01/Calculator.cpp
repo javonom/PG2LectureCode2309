@@ -16,3 +16,17 @@ bool Calculator::IsEven(int number)
 	return number % 2 == 0;
 }
 
+float Calculator::average(const std::vector<float>& grades)
+{
+    float sum = 0;
+
+    for (const float& grade : grades)
+    {
+        sum += grade;
+    }
+
+    float avg = grades.empty() ? 0 : sum / grades.size();
+
+    return avg;
+}
+
