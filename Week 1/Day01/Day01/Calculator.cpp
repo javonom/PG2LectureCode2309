@@ -15,3 +15,4 @@ bool Calculator::IsEven(int number)
 {
 	return number % 2 == 0;
 }
+
